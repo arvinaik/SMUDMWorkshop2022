@@ -12,7 +12,7 @@ select staffType, count(distinct staffId) from staff group by staffType;
 select * from staff;
 
 # This should not work
-select * from staff group by staffType having sid = 296;
+select * from staff group by staffType having staffid = 296;
 
 # Don't need to use the same aggregate function in having and select
 select staffType as std, max(staffId) as maxStaffId from staff group by staffType having avg(staffId) > 300;
